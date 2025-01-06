@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PerfectOS, una distribución Linux rápida, eficiente y amigable con el usuario.">
+    <title>PerfectOS</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Aquí va tu CSS personalizado -->
+    <link rel="icon" href="images/logo.png" type="image/png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/WebLogo.png" alt="Logo PerfectOS">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#caracteristicas">Características</a></li>
+                <li><a href="#descargas">Descargas</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>    
+    
+    <!-- Bienvenida -->
+    <section id="bienvenida">
+        <h1>Bienvenido a PerfectOS</h1>
+        <p>PerfectOS es una distribución Linux rápida, eficiente y fácil de usar, diseñada para brindarte una experiencia única y un sistema operativo estable para tus necesidades diarias.</p>
+    </section>
+
+    <!-- Sección Características -->
+    <section id="caracteristicas">
+        <h2>Características</h2>
+        <div class="feature-cards">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-tachometer-alt"></i>
+                </div>
+                <h3>Rendimiento</h3>
+                <p>Optimizado para el máximo rendimiento en equipos modernos y antiguos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Seguridad</h3>
+                <p>Parches de seguridad y protección aplicados directamente en el kernel.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-hand-holding"></i>
+                </div>
+                <h3>Fácil de usar</h3>
+                <p>Interfaz gráfica amigable y herramientas intuitivas para una experiencia de uso sencilla. No requiere instalación de controladores.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-plug"></i>
+                </div>
+                <h3>Compatibilidad</h3>
+                <p>Basado en Debian, soporta una amplia gama de hardware y software.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <h3>Personalización</h3>
+                <p>Cambia todo lo que desees con la aplicación Retoques y las extensiones de GNOME.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-sync-alt"></i>
+                </div>
+                <h3>Actualizaciones</h3>
+                <p>Recibe actualizaciones semanales y mejoras para asegurar un sistema óptimo y siempre listo para usar.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Especificaciones del Sistema -->
+    <section class="system-specs">
+        <h3>Requisitos del Sistema</h3>
+        <ul>
+            <li><strong>Procesador:</strong> 2 nucleos </li>
+            <li><strong>RAM:</strong> 2 GB + 2 GB swap</li>
+            <li><strong>Espacio en Disco:</strong> 20 GB </li>
+            <li><strong>Monitor:</strong> 1024x768 </li>
+            <li><strong>Tarjeta Gráfica:</strong> Compatible con OpenGL 2.1 o superior</li>
+            <li><strong>Conexión a Internet:</strong> Requerida para la instalacion y actualizaciones</li>
+        </ul>
+    </section>
+
+    <!-- Descargas -->
+    <section id="descargas">
+        <h2>Descargar PerfectOS</h2>
+        <p>Elige la versión que mejor se adapte a tus necesidades y empieza a disfrutar de PerfectOS.</p>
+        
+        <div class="download-versions">
+            <div class="download-card">
+                <h3>Compatibilidad</h3>
+                <p>La mejor compatibilidad para una amplia gama de hardware. Ideal si buscas estabilidad y funcionamiento en equipos más antiguos.</p>
+                <a href="#" class="btn-download not-available">No Disponible</a>
+            </div>
+            
+            <div class="download-card">
+                <h3>Rendimiento</h3>
+                <p>Esta versión hace uso del kernel liquorix y optimizaciones adicionales de rendimiento, ideal para cualquier tipo de usuario. (Recomendado)</p>
+                <a href="https://www.mediafire.com/file/pmlpqith1m47rfa/PerfectSystemBook_amd64_2024-09-03_1111.iso/file" class="btn-download">Descargar Rendimiento</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Donaciones -->
+    <section id="donaciones">
+        <h2>Apoya a PerfectOS</h2>
+        <p>PerfectOS es un proyecto gratuito que depende del apoyo de su comunidad. Si quieres ayudarnos a seguir desarrollando, considera hacer una donación.</p>
+        
+        <div class="donation-options">
+            <div class="donation-card">
+                <h3>Donar con PayPal</h3>
+                <p>Contribuye fácilmente a través de tu cuenta PayPal.</p>
+                <!-- Botón de donación de PayPal -->
+                <form action="https://www.paypal.com/donate" method="post" target="_top">
+                    <input type="hidden" name="business" value="trujillomayajuanfelipe@gmail.com"> <!-- Reemplaza con tu correo de PayPal -->
+                    <input type="hidden" name="item_name" value="Donación para PerfectOS">
+                    <input type="hidden" name="currency_code" value="USD">
+                    <input type="submit" value="Donar ahora" class="btn-donate">
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto -->
+    <section id="contacto">
+        <h2>Contáctanos</h2>
+        <p>Si tienes alguna pregunta, sugerencia o necesitas más información sobre PerfectOS, no dudes en escribirnos.</p>
+        
+        <!-- Formulario de contacto -->
+        <div class="contact-form">
+            <form id="contactForm" action="enviar_correo.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" id="name" name="name" placeholder="Ingresa tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Correo Electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="Ingresa tu correo" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+
+        <!-- Invitación al Discord -->
+        <div class="discord-invite">
+            <p>También puedes unirte a nuestra comunidad en Discord:</p>
+            <a href="https://discord.gg/BYG88wMrNF" class="btn-discord" target="_blank">Únete a nuestro Discord</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Catmaster3188 - Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>

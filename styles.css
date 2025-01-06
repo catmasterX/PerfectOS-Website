@@ -1,0 +1,726 @@
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+a {
+    text-decoration: none;
+    color: #00b140;
+}
+
+h1, h2, h3 {
+    margin: 0;
+    padding: 0;
+}
+
+/* Header */
+header {
+    background: linear-gradient(90deg, #15825b, #1b9c6d); /* Degradado usando el color del logo */
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header .logo img {
+    height: 60px;
+    transition: transform 0.3s ease;
+}
+
+header .logo img:hover {
+    transform: scale(1.1); /* Efecto al pasar el mouse sobre el logo */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 30px;
+    position: relative;
+}
+
+nav ul li a {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+/* Efecto hover para los enlaces */
+nav ul li a:hover {
+    background-color: #ffffff;
+    color: #15825b; /* Color verde del logo */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Efecto active para los enlaces */
+nav ul li a.active {
+    background-color: #1b9c6d;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+}
+
+/* Menú desplegable (si es necesario) */
+nav ul li:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilos del menú desplegable */
+nav ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #232323;
+    min-width: 150px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    z-index: 999;
+}
+
+nav ul li .dropdown-menu a {
+    display: block;
+    color: white;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+nav ul li .dropdown-menu a:hover {
+    background-color: #15825b; /* Color verde del logo */
+    color: white;
+}
+
+/* Agregar un efecto de transición a todo el header */
+header {
+    transition: all 0.3s ease;
+}
+
+/* Al hacer scroll, el header puede cambiar de color */
+body.scrolled header {
+    background: linear-gradient(90deg, #15825b, #1b9c6d); /* Colores complementarios */
+}
+
+
+/* Sección Bienvenida */
+#bienvenida {
+    background: linear-gradient(135deg, #15825b, #1b9c6d); /* Fondo degradado con el verde del logo */
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 1200px;
+    position: relative;
+}
+
+#bienvenida::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('images/welcome-bg.jpg'); /* Asegúrate de tener una imagen atractiva de fondo */
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    border-radius: 10px;
+    z-index: -1;
+}
+
+#bienvenida h1 {
+    font-size: 3.5em;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #ffffff;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+#bienvenida p {
+    font-size: 1.2em;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #f4f4f4;
+    margin-bottom: 30px;
+}
+
+#bienvenida .btn-download {
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background-color: #15825b; /* Verde acorde con el logo */
+    border: none;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+#bienvenida .btn-download:hover {
+    background-color: #1b9c6d; /* Cambio de color en el hover */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+#bienvenida .btn-download:active {
+    background-color: #15825b;
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+
+/* Sección Características */
+#caracteristicas {
+    background-color: #f0f0f0; /* Fondo más suave y claro */
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Sombra más suave */
+    margin: 20px auto;
+    max-width: 1200px;
+}
+
+#caracteristicas h2 {
+    font-size: 3em;
+    font-weight: 700;
+    margin-bottom: 40px;
+    color: #15825b; /* Color del logo (verde) */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05); /* Sombra sutil */
+}
+
+/* Contenedor de las tarjetas */
+.feature-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Estilo de las tarjetas */
+.feature-card {
+    background-color: #ffffff; /* Fondo blanco suave */
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.05); /* Sombra suave */
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    max-width: 300px;
+}
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* Sombras más suaves al hacer hover */
+}
+
+/* Estilo para los iconos */
+.feature-icon {
+    font-size: 3em;
+    color: #15825b; /* Verde del logo */
+    margin-bottom: 20px;
+    transition: color 0.3s ease;
+}
+
+.feature-card:hover .feature-icon {
+    color: #1b9c6d; /* Verde más claro al hacer hover */
+}
+
+.feature-card h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.feature-card p {
+    font-size: 1.1em;
+    color: #666; /* Gris suave */
+    line-height: 1.6;
+}
+
+/* Mejoras en el hover */
+.feature-card:hover h3,
+.feature-card:hover p {
+    color: #333; /* Color de texto más oscuro al hacer hover */
+}
+
+/* Ajustes de color para el hover de las tarjetas */
+.feature-card:hover {
+    background-color: #f8f8f8; /* Fondo ligeramente más gris en el hover */
+}
+
+/* Sombra general más suave */
+.feature-card {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Especificaciones del sistema */
+.system-specs {
+    margin-top: 50px;
+    background-color: #2c2c2c;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.system-specs h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #15825b;
+}
+
+.system-specs ul {
+    list-style: none;
+    padding: 0;
+    color: #aaa;
+    font-size: 1.1rem;
+}
+
+.system-specs ul li {
+    margin-bottom: 10px;
+}
+
+/* Sección Descargas */
+#descargas {
+    background: linear-gradient(135deg, #1e1e1e, #232323);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#descargas h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #15825b;
+    font-family: 'Roboto', sans-serif;
+}
+
+#descargas p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Contenedor de versiones de descarga */
+.download-versions {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+/* Tarjetas de descarga */
+.download-card {
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.download-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    background-color: #15825b;
+}
+
+.download-card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.download-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.download-card .btn-download {
+    background-color: #15825b;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.download-card .btn-download:hover {
+    background-color: #0d5f47;
+}
+
+.download-card .btn-download:active {
+    transform: scale(0.98);
+}
+
+/* Iconos dentro de las tarjetas */
+.card-icon {
+    font-size: 3rem;
+    color: #15825b;
+    margin-bottom: 15px;
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Animación de entrada de la tarjeta */
+.download-card {
+    animation: fadeInUp 0.6s ease-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Botón "No Disponible" */
+.btn-download.not-available {
+    background-color: #d9534f; /* Rojo */
+    color: #fff;
+    cursor: not-allowed; /* Indica que no es interactivo */
+    pointer-events: none; /* Desactiva la funcionalidad del enlace */
+}
+
+.btn-download.not-available:hover {
+    background-color: #c9302c; /* Rojo más oscuro al pasar el mouse */
+}
+
+
+
+
+/* Sección Donaciones */
+#donaciones {
+    background: linear-gradient(135deg, #1c1c1c, #242424);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#donaciones h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #15825b;
+    font-family: 'Roboto', sans-serif;
+}
+
+#donaciones p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Opciones de donación */
+.donation-options {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Tarjetas de donación */
+.donation-card {
+    background-color: #2b2b2b;
+    border-radius: 15px;
+    padding: 30px;
+    width: 280px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.donation-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    background-color: #15825b;
+}
+
+.donation-card h3 {
+    font-size: 1.8rem;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.donation-card p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #bbb;
+}
+
+.donation-card .btn-donate {
+    background-color: #15825b;
+    color: #fff;
+    font-size: 1.1rem;
+    padding: 12px 25px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.donation-card .btn-donate:hover {
+    background-color: #0d5f47;
+}
+
+.donation-card .btn-donate:active {
+    transform: scale(0.98);
+}
+
+
+
+/* Sección Contacto */
+#contacto {
+    background: linear-gradient(135deg, #1a1a1a, #232323);
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 40px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+#contacto h2 {
+    font-size: 2.5rem;
+    color: #15825b;
+    margin-bottom: 20px;
+}
+
+#contacto p {
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.6;
+}
+
+/* Formulario de contacto */
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto 30px;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    color: #bbb;
+    text-align: left;
+    display: block;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #15825b;
+    border-radius: 5px;
+    background-color: #1c1c1c;
+    color: #fff;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: #0d5f47;
+}
+
+.btn-submit {
+    background-color: #15825b;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: #0d5f47;
+}
+
+/* Invitación al Discord */
+.discord-invite {
+    margin-top: 30px;
+}
+
+.discord-invite p {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.btn-discord {
+    background-color: #5865f2;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.btn-discord:hover {
+    background-color: #4752c4;
+}
+
+
+/* Footer */
+footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Responsividad */
+
+/* Pantallas medianas (tablets y dispositivos similares) */
+@media (max-width: 1120px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #222;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    nav ul li a {
+        font-size: 1.2em;
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+        color: #15825b;
+    }
+
+    #bienvenida h1 {
+        font-size: 2em;
+    }
+
+    #bienvenida p {
+        font-size: 1em;
+    }
+
+    .feature-cards {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .system-specs {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .system-spec-card {
+        max-width: 90%;
+    }
+
+    .contact-card form {
+        width: 100%;
+    }
+}
